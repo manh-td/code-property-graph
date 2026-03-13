@@ -1,0 +1,11 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: code-property-graph
+    container_name: code-property-graph-container
+    volumes:
+      - .:/app
+    stdin_open: true
+    tty: true
