@@ -1,3 +1,5 @@
+from examples.functions import example_function
+
 def greet(name: str) -> str:
     return f"Hello, {name}!"
 
@@ -7,4 +9,5 @@ def main() -> None:
 
 
 if __name__ == "__main__":
+    example_function()
     main()
