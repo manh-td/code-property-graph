@@ -27,16 +27,6 @@ RUN apt-get update && \
 ENV JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 ENV PATH="${JAVA_HOME}/bin:${PATH}"
 
-# Install Joern from the official install script.
-RUN mkdir -p /opt/joern && \
-	cd /opt/joern && \
-	curl -L "https://github.com/joernio/joern/releases/latest/download/joern-install.sh" -o joern-install.sh && \
-	chmod u+x joern-install.sh && \
-	./joern-install.sh && \
-	rm -f joern-install.sh
-
-ENV PATH="/opt/joern/joern-cli:${PATH}"
-
 WORKDIR /app
 
 COPY . .
