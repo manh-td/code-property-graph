@@ -1,17 +1,15 @@
-from __future__ import annotations
-
 import json
 import re
+import pandas as pd
 from collections import Counter, defaultdict
 from pathlib import Path
 from typing import Any, Literal, TypeAlias
-
-import pandas as pd
 
 
 NodeId: TypeAlias = int | str
 PDGEdges: TypeAlias = tuple[list[int], list[int]]
 GraphType: TypeAlias = Literal["reftype", "ast", "pdg", "cfgcdg", "all"]
+
 
 REPO_ROOT = Path("/app")
 CACHE_ROOT = REPO_ROOT / "cache"
