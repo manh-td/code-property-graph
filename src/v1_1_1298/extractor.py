@@ -12,7 +12,7 @@ GraphType: TypeAlias = Literal["reftype", "ast", "pdg", "cfgcdg", "all"]
 
 
 REPO_ROOT = Path("/app")
-CACHE_ROOT = REPO_ROOT / "cache" / "latest"
+CACHE_ROOT = REPO_ROOT / "cache" / "v1.1.1298"
 EMPTY_CODE_VALUES = {"", "<empty>"}
 NODE_PRIORITY = {
     "CONTROL_STRUCTURE": 100,
@@ -575,7 +575,7 @@ def _normalize_list_cell(value: Any) -> list[int]:
 if __name__ == "__main__":
     pdg_nodes, pdg_edges = joern_graph_extraction(
         "examples/sample.py",
-        "joern-output/latest/examples",
+        "joern-output/v1.1.1298/examples",
     )
     print(pdg_nodes)
     print(pdg_edges)
